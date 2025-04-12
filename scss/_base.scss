@@ -361,6 +361,9 @@ img {
 .text-blue-0f6 {
     color: #0F62FE;
 }
+.text-red-fb {
+    color: #FB0000;
+}
 
 /*=================================================================*/
 .bg-white {
@@ -384,14 +387,17 @@ img {
 .bg-red-ed {
     background-color: #ED1D4F;
 }
-.bg-gradient-1 {
-    background: linear-gradient(to right, #406CFF 100%, #09BC8A 0%);
-}
 .bg-gray-e8 {
     background-color: #e8e9ed;
 }
 .bg-gray-f5 {
     background-color: #F5F8FA;
+}
+.bg-gradient-1 {
+    background: linear-gradient(to right, #406CFF 100%, #09BC8A 0%);
+}
+.bg-gradient-2 {
+    background: linear-gradient(to right, #F4F5F9 100%, #F4F5F9 0%);
 }
 /*=================================================================*/
 .fw-300 {
@@ -1017,6 +1023,9 @@ img {
 .items-center {
     align-items: center;
 }
+.items-stretch {
+    align-items: stretch;
+}
 .justify-between {
     justify-content: space-between;
 }
@@ -1025,6 +1034,9 @@ img {
 }
 .justify-around {
     justify-content: space-around;
+}
+.justify-end {
+    justify-content: flex-end;
 }
 .flex-0 {
     flex-shrink: 0;
@@ -1220,4 +1232,27 @@ img {
 
 .ml-3xl-n15 {
     margin-left: -15px;
+}
+
+.scroll-0 {
+    /* width */
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: transparent;
+    }
 }

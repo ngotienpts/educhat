@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+        <!-- end favicon -->
+        <title>EduChat</title>
+        <!-- font -->
+       
+        <!-- end font -->
+        <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./lib/jquery/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+        <!-- ads center  -->
+        <div class="ads-center w-1920">
+            <img src="./images/ads_top.png" alt="">
+        </div>
+        <!-- end ads center  -->
+
+        <div class="login" style="position: relative;z-index: 1000;">
+            <div class="not-logged">
+                <div class="js__popupLoginContainer">
+                    <div class="content text-white js__popupLogin">
+                        <!-- top -->
+                        <div class="content-top d-3xl-flex items-center justify-between border-b-e5 pb-16 w-full">
+                            <div class="content-top__logo flex-0">
+                                <img src="./images/svg/logo_2.svg" alt="">
+                            </div>
+                            <div class="content-top__close pointer js__closePopupLogin">
+                                <img src="./images/svg/close-gray.svg" alt="">
+                            </div>
+                        </div>
+                        <!-- end top -->
+        
+                        <!-- main -->
+                        <div class="content-main w-full js__loginContainerForm">
+                            <!-- login -->
+                            <div class="content-main__login active js__loginForm">
+                                <!-- heading -->
+                                <div class="heading d-3xl-flex items-center justify-center border-b-e5 w-full mt-20">
+                                    <span class="heading-1 fs-24 text-gray-66 active">Đăng nhập</span>
+                                    <span class="heading-2 fs-24 text-gray-66 js__registerBtn">Đăng ký</span>
+                                </div>
+                                <!-- end heading -->
+        
+                                <!--  -->
+                                <ul class="social d-3xl-flex justify-center d-md-none items-center my-16">
+                                    <li class="social-item ml-8">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/fb-gray.svg" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="social-item ml-8">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/twitter-gray.svg" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="social-item ml-8">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/instagram-gray.svg" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="social-item ml-8">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/zalo-gray.svg" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                   
+                                 </ul>
+                                <!--  -->
+        
+                                <div>
+                                    <p class="text-center fs-15 fw-500 lh-140 text-gray-44 mb-10 ">hoặc</p>
+                                    <p class="text-center fs-15 lh-140 text-gray-44 mb-10 ">Vui lòng nhập thông tin cá nhân</p>
+                                </div>
+        
+                                <!-- form -->
+                                <div class="form form-container mb-10">
+                                    <form action="">
+                                        <div class="form-group mb-10">
+                                            <input type="text" class="form-input" placeholder="Tên đăng nhập">
+                                            <p class="mess-error">Tên đăng nhập không chính xác</p>
+                                        </div>
+                                        <div class="form-group mb-10">
+                                            <input type="password" class="form-input" placeholder="Mật khẩu">
+                                            <p class="mess-error">Mật khẩu không đúng</p>
+                                        </div>
+        
+                                        <button class="btn form-submit">Đăng nhập</button>
+                                    </form>
+                                </div>
+                                <!-- end form -->
+        
+                                <button class="btn btn-forgot js__forgotBtn">Quên mật khẩu</button>
+                            </div>
+                            <!-- end login -->
+                            <!-- register -->
+                            <div class="content-main__register js__registerForm">
+                                <!-- heading -->
+                                <div class="heading d-3xl-flex items-center justify-center border-b-e5 w-full mt-20">
+                                    <span class="heading-1 fs-24 fw-500 text-gray-66 js__loginBtn">Đăng nhập</span>
+                                    <span class="heading-2 fs-24 fw-500 text-gray-66 active">Đăng ký</span>
+                                </div>
+                                <!-- end heading -->
+        
+                                <!--  -->
+                                <ul class="social d-3xl-flex justify-center d-md-none items-center my-16">
+                                    <li class="social-item ml-8">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/fb-gray.svg" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="social-item ml-8">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/twitter-gray.svg" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="social-item ml-8">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/instagram-gray.svg" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="social-item ml-8">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/zalo-gray.svg" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                 </ul>
+                                <!--  -->
+        
+                                <div>
+                                    <p class="text-center fs-15 fw-500 lh-140 text-gray-44 mb-10 ">hoặc</p>
+                                    <p class="text-center fs-15 lh-140 text-gray-44 mb-10 ">Vui lòng nhập thông tin cá nhân</p>
+                                </div>
+        
+                                <!-- form -->
+                                <div class="form form-container mb-10">
+                                    <form action="">
+                                        <div class="form-group mb-10">
+                                            <input type="text" class="form-input" placeholder="Tên đăng nhập">
+                                            <p class="mess-error">Tên đăng nhập không chính xác</p>
+                                        </div>
+                                        <div class="form-group mb-10">
+                                            <input type="password" class="form-input" placeholder="Mật khẩu">
+                                            <p class="mess-error">Mật khẩu không đúng</p>
+                                        </div>
+                                        <div class="form-group mb-10">
+                                            <input type="email" class="form-input" placeholder="Email">
+                                            <p class="mess-error">Email không hợp lệ</p>
+                                        </div>
+        
+                                        <button class="btn form-submit">Đăng ký</button>
+                                    </form>
+                                </div>
+                                <!-- end form -->
+                            </div>
+                            <!-- end register -->
+                            <!-- forgotpassword -->
+                            <div class="content-main__forgot js__forgotForm">
+                                <!-- heading -->
+                                <div class="heading d-3xl-flex items-center justify-center border-b-e5 w-full my-20">
+                                    <span class="heading-1 fs-24 fw-500 text-gray-66 active">Đặt lại mật khẩu</span>
+                                </div>
+                                <!-- end heading -->
+                                <div>
+                                    <p class="text-center fs-15 lh-140 text-gray-44 mb-10 ">Nhập email của bạn để lấy lại mật khẩu</p>
+                                </div>
+                                <!-- form -->
+                                <div class="form form-container mb-10">
+                                    <form action="">
+                                        <div class="form-group mb-10">
+                                            <input type="email" class="form-input" placeholder="Email">
+                                            <p class="mess-error">Email không đúng</p>
+                                        </div>
+        
+                                        <button class="btn form-submit">Lấy lại mật khẩu</button>
+                                    </form>
+                                </div>
+                                <!-- end form -->
+                            </div>
+                            <!-- end forgotpassword -->
+                        </div>
+                        <!-- end main -->
+                    </div>
+                    <div class="overlay js__overlay"></div>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+        <header id="header" class="header relative js__stickyHeader">
+            <!-- pc -->
+            <div class="d-3xl-block d-lg-none">
+                <div class="header-pc bg-blue-001 w-wrapper">
+                    <!-- container -->
+                    <div class="header-pc__container w-1140 d-3xl-flex d-md-block items-center justify-between gap-20">
+                        <!-- left -->
+                        <div class="header-pc__left flex-0">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="./images/svg/logo_1.svg" alt="">
+                                </a>
+                            </div>
+                            <!-- end logo -->
+                        </div>
+                        <!-- end left -->
+
+                        <!-- right -->
+                        <div class="header-pc__right flex-1">
+                            <!-- top -->
+                            <div class="header-pc__top d-3xl-flex items-center pt-20 pb-12">
+                                <!-- social -->
+                                <ul class="social d-3xl-flex items-center">
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/fb-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/tiktok-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/ytb-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/twitter-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/instagram-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- end social -->
+                                <!-- login -->
+                                <div class="login ml-16">
+                                    <!-- not logged -->
+                                    <div class="not-logged">
+                                        <!-- icon -->
+                                        <div class="login-icon js__showPopupLogin">
+                                            <img src="./images/svg/user-w.svg" alt="">
+                                        </div>
+                                        <!-- end icon -->
+                                        
+                                    </div>
+                                    <!-- end not logged -->
+                                    
+                                    <!-- logged -->
+                                    <div class="logged d-3xl-none">
+                                        <div class="logged-container relative js__dropdownContainer">
+                                            <div class="logged-heading d-3xl-flex items-center js__showDropdown">
+                                                <h3 class="text fs-14 text-white fw-500 d-sm-none">Thanh Hoài</h3>
+                                                <div class="avatar ml-4">
+                                                    <img src="./images/3.jpg" alt="">
+                                                </div>
+                                                <div class="icon ml-4">
+                                                    <img src="./images/svg/Polygon-down-w.svg" alt="">
+                                                </div>
+                                            </div>
+                
+                                            <ul class="logged-content absolute dropdownContent js__dropdownContent">
+                                                <li class="logged-item"><a href="#" class="logged-link">Tài khoản</a></li>
+                                                <li class="logged-item log-out">Đăng xuất</li>
+                                            </ul>
+                
+                                            <div class="overlay js__overlay"></div>
+                                        </div>
+                                    </div>
+                                    <!-- end logged -->
+                                </div>
+                                <!-- end login -->
+                                <!-- language -->
+                                <div class="language fs-14 js__languageContainer text-white font-arial fw-500 ml-15">
+                                    <div class="language-default d-3xl-flex items-center js__languageDefault">
+                                        <div class="language-default__item d-3xl-flex items-center mr-4 js__languageDefaultText">
+                                            <span class="language-text d-3xl-inline mr-4">En</span>
+                                            <img src="./images/flag_2.png" class="language-img" alt="">
+                                        </div>
+                                        <div class="language-down">
+                                            <img src="./images/svg/Polygon-down-w.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="language-list">
+                                        <!-- item -->
+                                        <div class="language-item d-3xl-flex items-center js__languageItem">
+                                            <span class="language-text d-3xl-inline mr-4">En</span>
+                                            <img src="./images/flag_2.png" class="language-img" alt="">
+                                        </div>
+                                        <!-- end item -->
+                                        <!-- item -->
+                                        <div class="language-item d-3xl-flex items-center js__languageItem">
+                                            <span class="language-text d-3xl-inline mr-4">Vi</span>
+                                            <img src="./images/flag_1.png" class="language-img" alt="">
+                                        </div>
+                                        <!-- end item -->
+                                    </div>
+                                    <div class="overlay js__overlay"></div>
+                                </div>
+                                <!-- end language -->
+                            </div>
+                            <!-- end top -->
+
+                            <!-- navbar -->
+                            <nav class="navbar">
+                                <ul class="navbar-list d-3xl-flex items-center fs-15 text-white gap-40 pt-8">
+                                    <li class="navbar-item active">
+                                        <a href="#">Trang chủ</a>
+                                        
+                                    </li>
+                                    <li class="navbar-item">
+                                        <a href="#">Bài viết</a>
+                                        <ul class="navbar-dropdown">
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <a href="#">Hồ sơ</a>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <a href="#">Khóa học</a>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <a href="#">Giới thiệu</a>
+                                    </li>
+                                 
+                                    <li class="navbar-item">
+                                        <a href="#">Đăng ký</a>
+                                        <ul class="navbar-dropdown">
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- end navbar -->
+                        </div>
+                        <!-- end right -->
+                    </div>
+                    <!-- end container -->
+                </div>
+                
+            </div>
+            <!-- end pc -->
+
+            <!-- mb -->
+            <div class="d-3xl-none d-lg-block">
+                <!-- top -->
+                <div class="header-mb-top w-wrapper bg-blue-001 relative py-10 bg-green-009">
+                    <div class="header-mb-top__container w-1140 d-3xl-flex items-center justify-between w-full">
+                        <!-- sub menu -->
+                        <div class="sub-menu">
+                            <!-- icon bar -->
+                            <div class="icon-bar js__clickShowMenuMb px-15 py-10">
+                                <img src="./images/svg/bar-w.svg" alt="" class="icon-20">
+                            </div>
+                            <!-- end icon bar -->
+                            <!-- content -->
+                            <div class="sub-menu__content">
+                                <!-- close -->
+                                <div class="sub-menu__close js__closeSubMenu h-56 p-4 mb-8 d-3xl-flex items-center text-white">
+                                    <img src="./images/svg/close-w.svg" alt="">
+                                </div>
+                                <!-- end close -->
+
+                                <div class="sub-menu__container">
+                                    <!-- list -->
+                                    <div class="sub-menu__list">
+                                        <!-- item -->
+                                        <div class="sub-menu__item">
+                                            <!-- heading -->
+                                            <div class="heading-sub js__dropDown d-3xl-flex items-center justify-between px-16 py-8 text-white">
+                                                <h3 class="heading-sub__title fs-16 fw-500">
+                                                    Movies
+                                                </h3>
+                                                <div class="heading-sub__arrow">
+                                                    <img src="./images/svg/arrow-down-w.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <!-- end heading -->
+
+                                            <!-- sub menu list -->
+                                            <ul class="list-sub js__listSubMenu" style="">
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                
+                                            </ul>
+                                            <!-- end sub menu list -->
+                                        </div>
+                                        <!-- end item -->
+                                        <!-- item -->
+                                        <div class="sub-menu__item">
+                                            <!-- heading -->
+                                            <div class="heading-sub js__dropDown d-3xl-flex items-center justify-between px-16 py-8 text-white">
+                                                <h3 class="heading-sub__title fs-16 fw-500">
+                                                    Movies
+                                                </h3>
+                                                <div class="heading-sub__arrow">
+                                                    <img src="./images/svg/arrow-down-w.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <!-- end heading -->
+
+                                            <!-- sub menu list -->
+                                            <ul class="list-sub js__listSubMenu" style="">
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                
+                                            </ul>
+                                            <!-- end sub menu list -->
+                                        </div>
+                                        <!-- end item -->
+                                    </div>
+                                    <!-- end list -->
+                                </div>
+                            </div>
+                            <!-- end content -->
+                            <div class="overlay js__overlay"></div>
+                        </div>
+                        <!-- end sub menu -->
+                        <!-- logo -->
+                        <div class="logo mx-auto">
+                            <a href="#" class="logo-link">
+                                <img src="./images/svg/logo_1.svg" alt="" class="logo-img mx-auto"/>
+                            </a>
+                            
+                        </div>
+                        <!-- end logo -->
+
+                        <!-- search -->
+                        <div class="search-mb relative pl-15">
+                            <div class="search-mb__icon js__searchMb">
+                                <img src="./images/svg/search-w.svg" alt="" class="icon-20"/>
+                            </div>
+                        </div>
+                        <!-- form -->
+                        <div class="header-search-mb__form h-60 w-full js__formSearchMb shadow">
+                            <form action="" class="w-full h-full">
+                                <div class="relative w-full h-full">
+                                    <input type="text" class="header-search-input w-full h-full p-8 fs-16 js__focusSearchMb" placeholder="Search..."/>
+                                    <div class="header-search-btn btn absolute h-full js__closeSearchMb">
+                                        <img src="./images/svg/close-gray.svg" alt=""/>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- end form -->
+                        <!-- end search -->
+                    </div>
+                </div>
+                <!-- end top -->
+
+            </div>
+            <!-- end mb -->
+        </header>
+        <!-- end header -->
+        <!-- main -->
+        <main id="main" class="main">
+           
+            <!-- breadcrumb primary -->
+            <div class="breadcrumb-primary relative w-wrapper z-10 over-hidden py-20 bg-gradient-2">
+                <div class="breadcrumb-primary__container w-1140 w-md-500 border-b-e5 pb-20">
+                    <ul class="breadcrumb-primary__list d-3xl-flex items-center">
+                        <li class="breadcrumb-primary__item fs-15 fw-500">
+                            <a href="#" class="breadcrumb-primary__link">Trang chủ</a>
+                        </li>
+                        <li class="breadcrumb-primary__item fs-15 fw-500 active">
+                            <a href="#" class="breadcrumb-primary__link">Bài viết</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end breadcrumb primary -->
+
+            <!-- about primary -->
+            <section class="about-primary relative z-20 over-hidden w-wrapper bg-gradient-2">
+                <div class="about-primary__container w-1140 w-md-500 d-3xl-flex items-center d-md-block gap-20">
+                    <!-- left -->
+                    <div class="about-primary__left flex-1">
+                        <h2 class="heading-primary fs-40 text-gray-1f fw-500">Bài viết</h2>
+                    </div>
+                    <!-- end left -->
+                    <!-- right -->
+                    <div class="about-primary__right flex-0 w-35 mt-md-40 w-md-full">
+                        <img src="./images/person_3.png" alt="">
+                    </div>
+                    <!-- end right -->
+                </div>
+            </section>
+            <!-- end about primary -->
+
+            <!-- about secondary -->
+            <section class="about-secondary relative z-20 over-hidden w-wrapper bg-white">
+                <div class="about-secondary__container w-1140 w-md-500 py-60 py-sm-40 d-3xl-flex d-md-block gap-20">
+                    <!-- left -->
+                    <div class="about-secondary__left flex-0 w-30 w-md-full">
+                        <h2 class="heading-secondary fs-40 text-gray-1f fw-500">EduCHAT</h2>
+                    </div>
+                    <!-- end left -->
+                    <!-- right -->
+                    <div class="about-secondary__right flex-1 mt-md-40">
+                        <!-- list -->
+                        <div class="about-secondary__list">
+                            <!-- item -->
+                            <div class="about-secondary__item active js__collapseContainer">
+                                <!-- top -->
+                                <div class="children-top d-3xl-flex items-center justify-between js__collapse border-b-e5 mb-24 pb-24">
+                                    <div class="text d-3xl-flex items-center flex-1 fw-600 text-gray-44">
+                                        <span>1. Giới thiệu </span>
+                                    </div>
+                                    <div class="icon flex-0">
+                                        <div class="icon-minus">
+                                            <img src="./images/svg/minus.svg" alt="">
+                                        </div>
+                                        <div class="icon-plus">
+                                            <img src="./images/svg/plus.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end top -->
+                                
+                                <!-- content -->
+                                <div class="children-content text-gray-44 fs-16 lh-160">
+                                    <p>Educhat là nền tảng giáo dục trực tuyến tiên phong trong việc kết nối giảng viên, chuyên gia và học viên thông qua các khóa học chất lượng cao. Chúng tôi cam kết mang đến trải nghiệm học tập linh hoạt, hiệu quả và cá nhân hóa, giúp người học phát triển kỹ năng và kiến thức cần thiết trong thế giới số.</p>
+                                    <p>Sứ mệnh của Educhat:</p>
+                                    <p>Cung cấp nền tảng học tập trực tuyến hiện đại, dễ sử dụng.
+                                        Kết nối giảng viên giàu kinh nghiệm với học viên trên toàn cầu.
+                                        Ứng dụng công nghệ AI và dữ liệu để tối ưu hóa hành trình học tập.</p>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end item -->
+                            <!-- item -->
+                            <div class="about-secondary__item js__collapseContainer">
+                                <!-- top -->
+                                <div class="children-top d-3xl-flex items-center justify-between js__collapse border-b-e5 mb-24 pb-24">
+                                    <div class="text d-3xl-flex items-center flex-1 fw-600 text-gray-44">
+                                        <span>2. Số giấy phép kinh doanh </span>
+                                    </div>
+                                    <div class="icon flex-0">
+                                        <div class="icon-minus">
+                                            <img src="./images/svg/minus.svg" alt="">
+                                        </div>
+                                        <div class="icon-plus">
+                                            <img src="./images/svg/plus.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end top -->
+                                
+                                <!-- content -->
+                                <div class="children-content text-gray-44 fs-16 lh-160">
+                                    <p>Educhat là nền tảng giáo dục trực tuyến tiên phong trong việc kết nối giảng viên, chuyên gia và học viên thông qua các khóa học chất lượng cao. Chúng tôi cam kết mang đến trải nghiệm học tập linh hoạt, hiệu quả và cá nhân hóa, giúp người học phát triển kỹ năng và kiến thức cần thiết trong thế giới số.</p>
+                                    <p>Sứ mệnh của Educhat:</p>
+                                    <p>Cung cấp nền tảng học tập trực tuyến hiện đại, dễ sử dụng.
+                                        Kết nối giảng viên giàu kinh nghiệm với học viên trên toàn cầu.
+                                        Ứng dụng công nghệ AI và dữ liệu để tối ưu hóa hành trình học tập.</p>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end item -->
+                            <!-- item -->
+                            <div class="about-secondary__item js__collapseContainer">
+                                <!-- top -->
+                                <div class="children-top d-3xl-flex items-center justify-between js__collapse border-b-e5 mb-24 pb-24">
+                                    <div class="text d-3xl-flex items-center flex-1 fw-600 text-gray-44">
+                                        <span>3. Điều khoản sử dụng & Chính sách bảo mật </span>
+                                    </div>
+                                    <div class="icon flex-0">
+                                        <div class="icon-minus">
+                                            <img src="./images/svg/minus.svg" alt="">
+                                        </div>
+                                        <div class="icon-plus">
+                                            <img src="./images/svg/plus.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end top -->
+                                
+                                <!-- content -->
+                                <div class="children-content text-gray-44 fs-16 lh-160">
+                                    <p>Educhat là nền tảng giáo dục trực tuyến tiên phong trong việc kết nối giảng viên, chuyên gia và học viên thông qua các khóa học chất lượng cao. Chúng tôi cam kết mang đến trải nghiệm học tập linh hoạt, hiệu quả và cá nhân hóa, giúp người học phát triển kỹ năng và kiến thức cần thiết trong thế giới số.</p>
+                                    <p>Sứ mệnh của Educhat:</p>
+                                    <p>Cung cấp nền tảng học tập trực tuyến hiện đại, dễ sử dụng.
+                                        Kết nối giảng viên giàu kinh nghiệm với học viên trên toàn cầu.
+                                        Ứng dụng công nghệ AI và dữ liệu để tối ưu hóa hành trình học tập.</p>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end item -->
+                        </div>
+                        <!-- end list -->
+                    </div>
+                    <!-- end right -->
+                </div>
+            </section>
+            <!-- end about secondary -->
+           
+            <!-- septernary -->
+            <section class="section-septernary relative z-20 over-hidden w-wrapper bg-gray-e8">
+                <div class="section-septernary__container w-1140 py-60 py-sm-40 d-3xl-flex d-md-block items-center">
+                   <!-- left -->
+                   <div class="section-septernary__left flex-1 pr-40">
+                        <h2 class="heading-primary fs-40 fw-500">Liên hệ</h2>
+                        <div class="txt mt-40">
+                            <h3 class="title fs-17 fw-500">CÔNG TY CỔ PHẦN GIA ĐÌNH MỚI</h3>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Giấy phép thiết lập MXH số …/GP-BTTTT, do Bộ Thông tin và Truyền thông cấp ngày….</p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Chịu trách nhiệm: <strong>Nguyễn Quyết</strong> </p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Hotline:</p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Địa chỉ:</p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Văn phòng làm việc:</p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Email: educhat.vn@gmail.com</p>
+                        </div>
+                   </div>
+                   <!-- end left -->
+                   <!-- right -->
+                   <div class="section-septernary__right flex-0 mt-md-40">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1120315029334!2d105.78825837584134!3d21.02820288779654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4ee3d2b0f7%3A0x5ae05f0cc5533cd8!2zQ8O0bmcgdmnDqm4gQ-G6p3UgR2nhuqV5!5e0!3m2!1svi!2s!4v1744265206620!5m2!1svi!2s" width="730" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   </div>
+                   <!-- end right -->
+                </div>
+            </section>
+            <!-- end quinary -->
+
+        </main>
+        <!-- end main -->
+        <!-- footer -->
+        <footer id="footer" class="footer z-20 relative bg-white w-wrapper">
+            <!-- container -->
+            <div class="footer-container w-1140 d-3xl-flex d-md-block items-center justify-between gap-20 py-24">
+                <!-- left -->
+                <div class="footer-left d-3xl-flex d-sm-block items-center">
+                    <!-- logo -->
+                    <div class="footer-logo mr-30">
+                        <a href="#">
+                            <img src="./images/svg/logo_3.svg" alt="">
+                        </a>
+                    </div>
+                    <!-- end logo -->
+                    <p class="text-gray-44 fs-15 mt-sm-20">® EduCHAT giữ bản quyền nội dung trên website này</p>
+                </div>
+                <!-- end left -->
+                <!-- right -->
+                <div class="footer-right mt-md-40">
+                    <!-- social -->
+                    <ul class="social d-3xl-flex items-center justify-center">
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/fb-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/tiktok-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/ytb-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/Twitter-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/instagram-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- end social -->
+                </div>
+                <!-- end right -->
+            </div>
+            <!-- end container -->
+            <!-- back top -->
+            <div id="back-top">
+                <img src="./images/svg/arrow-top-w.svg" alt="">
+            </div>
+            <!-- end back top -->
+        </footer>
+        <!-- end footer -->
+        <script src="./lib/swiper/swiper-bundle.min.js"></script>
+        <script src="./js/ResizeSensor.js"></script>
+        <script src="./js/theia-sticky-sidebar.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

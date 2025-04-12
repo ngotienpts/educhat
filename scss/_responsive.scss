@@ -98,8 +98,17 @@
         margin: auto;
     }
 
+    .mt-md-20 {
+        margin-top: 20px;
+    }
     .mt-md-40 {
         margin-top: 40px;
+    }
+    .w-md-full {
+        width: 100%;
+    }
+    .pl-md-0 {
+        padding-left: 0;
     }
     // --------------------------------------------------------------------header
     .navbar {
@@ -178,6 +187,12 @@
         }
     }
     // --------------------------------------------------------------------cate
+
+    .document-primary {
+        &__list {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
 
     // --------------------------------------------------------------------detail
     .detail-primary {
@@ -265,6 +280,9 @@
     .mt-sm-20 {
         margin-top: 20px;
     }
+    .mt-sm-40 {
+        margin-top: 40px;
+    }
 
     // --------------------------------------------------------------------header
 
@@ -344,6 +362,17 @@
             flex-wrap: nowrap;
             white-space: nowrap;
             overflow: auto;
+        }
+    }
+
+    .document-primary {
+        &__list {
+            .article {
+                padding-right: 0;
+                border-right: none;
+                padding-bottom: 24px;
+                border-bottom: 1px solid #e5e5e5;
+            }
         }
     }
 

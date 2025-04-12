@@ -45,6 +45,32 @@
     }
 }
 
+.search-desk {
+    form {
+        padding: 12px 20px;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+
+    .search-input {
+        padding: 8px 10px 8px 0;
+    }
+
+    .search-btn {
+        background-color: #ED1D4F;
+        border-radius: 4px;
+        width: 48px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 16px;
+            height: auto;
+        }
+    }
+}
 .section-primary {
     .bright-spot_1 {
         top: 0;
@@ -62,32 +88,7 @@
     }
     &__container {
 
-        .search-desk {
-            form {
-                padding: 12px 20px;
-                background-color: #fff;
-                border-radius: 4px;
-            }
-
-            .search-input {
-                padding: 8px 10px 8px 0;
-            }
-
-            .search-btn {
-                background-color: #ED1D4F;
-                border-radius: 4px;
-                width: 48px;
-                height: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                img {
-                    width: 16px;
-                    height: auto;
-                }
-            }
-        }
+       
 
     }
     &__left {
@@ -201,24 +202,24 @@
 
         }
 
-        .article-arrow {
-            &__link {
-                width: 24px;
-                height: 24px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: 1px solid rgba($color: #000000, $alpha: 0.2);
-                border-radius: 999px;
-                img {
-                    width: 14px;
-                    height: auto;
-                }
-            }
+        
+    }
+}
+.article-arrow {
+    &__link {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba($color: #000000, $alpha: 0.2);
+        border-radius: 999px;
+        img {
+            width: 14px;
+            height: auto;
         }
     }
 }
-
 .section-quinary {
     &__content {
         .article {

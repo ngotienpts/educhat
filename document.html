@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+        <!-- end favicon -->
+        <title>EduChat</title>
+        <!-- font -->
+       
+        <!-- end font -->
+        <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./lib/jquery/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+        <!-- ads center  -->
+        <div class="ads-center w-1920">
+            <img src="./images/ads_top.png" alt="">
+        </div>
+        <!-- end ads center  -->
+
+        <!-- header -->
+        <header id="header" class="header relative js__stickyHeader">
+            <!-- pc -->
+            <div class="d-3xl-block d-lg-none">
+                <div class="header-pc bg-blue-001 w-wrapper">
+                    <!-- container -->
+                    <div class="header-pc__container w-1140 d-3xl-flex d-md-block items-center justify-between gap-20">
+                        <!-- left -->
+                        <div class="header-pc__left flex-0">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="./images/svg/logo_1.svg" alt="">
+                                </a>
+                            </div>
+                            <!-- end logo -->
+                        </div>
+                        <!-- end left -->
+
+                        <!-- right -->
+                        <div class="header-pc__right flex-1">
+                            <!-- top -->
+                            <div class="header-pc__top d-3xl-flex items-center pt-20 pb-12">
+                                <!-- social -->
+                                <ul class="social d-3xl-flex items-center">
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/fb-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/tiktok-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/ytb-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/twitter-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/instagram-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- end social -->
+                                <!-- login -->
+                                <div class="login ml-16">
+                                    <!-- not logged -->
+                                    <div class="not-logged">
+                                        <!-- icon -->
+                                        <div class="login-icon js__showPopupLogin">
+                                            <img src="./images/svg/user-w.svg" alt="">
+                                        </div>
+                                        <!-- end icon -->
+                                        
+                                    </div>
+                                    <!-- end not logged -->
+                                    
+                                    <!-- logged -->
+                                    <div class="logged d-3xl-none">
+                                        <div class="logged-container relative js__dropdownContainer">
+                                            <div class="logged-heading d-3xl-flex items-center js__showDropdown">
+                                                <h3 class="text fs-14 text-white fw-500 d-sm-none">Thanh Hoài</h3>
+                                                <div class="avatar ml-4">
+                                                    <img src="./images/3.jpg" alt="">
+                                                </div>
+                                                <div class="icon ml-4">
+                                                    <img src="./images/svg/Polygon-down-w.svg" alt="">
+                                                </div>
+                                            </div>
+                
+                                            <ul class="logged-content absolute dropdownContent js__dropdownContent">
+                                                <li class="logged-item"><a href="#" class="logged-link">Tài khoản</a></li>
+                                                <li class="logged-item log-out">Đăng xuất</li>
+                                            </ul>
+                
+                                            <div class="overlay js__overlay"></div>
+                                        </div>
+                                    </div>
+                                    <!-- end logged -->
+                                </div>
+                                <!-- end login -->
+                                <!-- language -->
+                                <div class="language fs-14 js__languageContainer text-white font-arial fw-500 ml-15">
+                                    <div class="language-default d-3xl-flex items-center js__languageDefault">
+                                        <div class="language-default__item d-3xl-flex items-center mr-4 js__languageDefaultText">
+                                            <span class="language-text d-3xl-inline mr-4">En</span>
+                                            <img src="./images/flag_2.png" class="language-img" alt="">
+                                        </div>
+                                        <div class="language-down">
+                                            <img src="./images/svg/Polygon-down-w.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="language-list">
+                                        <!-- item -->
+                                        <div class="language-item d-3xl-flex items-center js__languageItem">
+                                            <span class="language-text d-3xl-inline mr-4">En</span>
+                                            <img src="./images/flag_2.png" class="language-img" alt="">
+                                        </div>
+                                        <!-- end item -->
+                                        <!-- item -->
+                                        <div class="language-item d-3xl-flex items-center js__languageItem">
+                                            <span class="language-text d-3xl-inline mr-4">Vi</span>
+                                            <img src="./images/flag_1.png" class="language-img" alt="">
+                                        </div>
+                                        <!-- end item -->
+                                    </div>
+                                    <div class="overlay js__overlay"></div>
+                                </div>
+                                <!-- end language -->
+                            </div>
+                            <!-- end top -->
+
+                            <!-- navbar -->
+                            <nav class="navbar">
+                                <ul class="navbar-list d-3xl-flex items-center fs-15 text-white gap-40 pt-8">
+                                    <li class="navbar-item active">
+                                        <a href="#">Trang chủ</a>
+                                        
+                                    </li>
+                                    <li class="navbar-item">
+                                        <a href="#">Bài viết</a>
+                                        <ul class="navbar-dropdown">
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <a href="#">Hồ sơ</a>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <a href="#">Khóa học</a>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <a href="#">Giới thiệu</a>
+                                    </li>
+                                 
+                                    <li class="navbar-item">
+                                        <a href="#">Đăng ký</a>
+                                        <ul class="navbar-dropdown">
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- end navbar -->
+                        </div>
+                        <!-- end right -->
+                    </div>
+                    <!-- end container -->
+                </div>
+                
+            </div>
+            <!-- end pc -->
+
+            <!-- mb -->
+            <div class="d-3xl-none d-lg-block">
+                <!-- top -->
+                <div class="header-mb-top w-wrapper bg-blue-001 relative py-10 bg-green-009">
+                    <div class="header-mb-top__container w-1140 d-3xl-flex items-center justify-between w-full">
+                        <!-- sub menu -->
+                        <div class="sub-menu">
+                            <!-- icon bar -->
+                            <div class="icon-bar js__clickShowMenuMb px-15 py-10">
+                                <img src="./images/svg/bar-w.svg" alt="" class="icon-20">
+                            </div>
+                            <!-- end icon bar -->
+                            <!-- content -->
+                            <div class="sub-menu__content">
+                                <!-- close -->
+                                <div class="sub-menu__close js__closeSubMenu h-56 p-4 mb-8 d-3xl-flex items-center text-white">
+                                    <img src="./images/svg/close-w.svg" alt="">
+                                </div>
+                                <!-- end close -->
+
+                                <div class="sub-menu__container">
+                                    <!-- list -->
+                                    <div class="sub-menu__list">
+                                        <!-- item -->
+                                        <div class="sub-menu__item">
+                                            <!-- heading -->
+                                            <div class="heading-sub js__dropDown d-3xl-flex items-center justify-between px-16 py-8 text-white">
+                                                <h3 class="heading-sub__title fs-16 fw-500">
+                                                    Movies
+                                                </h3>
+                                                <div class="heading-sub__arrow">
+                                                    <img src="./images/svg/arrow-down-w.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <!-- end heading -->
+
+                                            <!-- sub menu list -->
+                                            <ul class="list-sub js__listSubMenu" style="">
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                
+                                            </ul>
+                                            <!-- end sub menu list -->
+                                        </div>
+                                        <!-- end item -->
+                                        <!-- item -->
+                                        <div class="sub-menu__item">
+                                            <!-- heading -->
+                                            <div class="heading-sub js__dropDown d-3xl-flex items-center justify-between px-16 py-8 text-white">
+                                                <h3 class="heading-sub__title fs-16 fw-500">
+                                                    Movies
+                                                </h3>
+                                                <div class="heading-sub__arrow">
+                                                    <img src="./images/svg/arrow-down-w.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <!-- end heading -->
+
+                                            <!-- sub menu list -->
+                                            <ul class="list-sub js__listSubMenu" style="">
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                
+                                            </ul>
+                                            <!-- end sub menu list -->
+                                        </div>
+                                        <!-- end item -->
+                                    </div>
+                                    <!-- end list -->
+                                </div>
+                            </div>
+                            <!-- end content -->
+                            <div class="overlay js__overlay"></div>
+                        </div>
+                        <!-- end sub menu -->
+                        <!-- logo -->
+                        <div class="logo mx-auto">
+                            <a href="#" class="logo-link">
+                                <img src="./images/svg/logo_1.svg" alt="" class="logo-img mx-auto"/>
+                            </a>
+                            
+                        </div>
+                        <!-- end logo -->
+
+                        <!-- search -->
+                        <div class="search-mb relative pl-15">
+                            <div class="search-mb__icon js__searchMb">
+                                <img src="./images/svg/search-w.svg" alt="" class="icon-20"/>
+                            </div>
+                        </div>
+                        <!-- form -->
+                        <div class="header-search-mb__form h-60 w-full js__formSearchMb shadow">
+                            <form action="" class="w-full h-full">
+                                <div class="relative w-full h-full">
+                                    <input type="text" class="header-search-input w-full h-full p-8 fs-16 js__focusSearchMb" placeholder="Search..."/>
+                                    <div class="header-search-btn btn absolute h-full js__closeSearchMb">
+                                        <img src="./images/svg/close-gray.svg" alt=""/>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- end form -->
+                        <!-- end search -->
+                    </div>
+                </div>
+                <!-- end top -->
+
+            </div>
+            <!-- end mb -->
+        </header>
+        <!-- end header -->
+        <!-- main -->
+        <main id="main" class="main">
+           
+            <!-- breadcrumb primary -->
+            <div class="breadcrumb-primary relative w-wrapper z-10 over-hidden py-20 bg-gradient-2">
+                <div class="breadcrumb-primary__container w-1140 w-md-500 border-b-e5 pb-20">
+                    <ul class="breadcrumb-primary__list d-3xl-flex items-center">
+                        <li class="breadcrumb-primary__item fs-15 fw-500">
+                            <a href="#" class="breadcrumb-primary__link">Trang chủ</a>
+                        </li>
+                        <li class="breadcrumb-primary__item fs-15 fw-500 active">
+                            <a href="#" class="breadcrumb-primary__link">Tài liệu</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end breadcrumb primary -->
+
+            <!-- about primary -->
+            <section class="about-primary relative z-20 over-hidden w-wrapper bg-gradient-2">
+                <div class="about-primary__container w-1140 w-md-500 d-3xl-flex items-stretch d-md-block gap-20">
+                    <!-- left -->
+                    <div class="about-primary__left flex-1 pb-24">
+                        <!-- search -->
+                        <div class="search-desk">
+                            <form action="" class="relative d-3xl-flex items-center shadow">
+                                <input type="hidden" name="mod" value="archive">
+                                <input type="hidden" name="act" value="search">
+                                <input name="search" type="text" class="search-input fs-16 w-full h-full" placeholder="Tìm kiếm bài viết, giáo viên, khóa học">
+                                <button class="search-btn">
+                                    <img src="./images/svg/search-w.svg" loading="lazy" alt="" width="16" height="16">
+                                </button>
+                            </form>
+                        </div>
+                        <!-- end search -->
+
+                        <!-- filter list -->
+                        <ul class="filter-list d-3xl-flex items-center flex-wrap mt-20">
+                            <li class="filter-item active">
+                                <a href="#" class="filter-link">Tất cả</a>
+                            </li>
+                            <li class="filter-item">
+                                <a href="#" class="filter-link">Kinh doanh</a>
+                            </li>
+                            <li class="filter-item">
+                                <a href="#" class="filter-link">Công nghệ thông tin</a>
+                            </li>
+                            <li class="filter-item">
+                                <a href="#" class="filter-link">Khoa học máy tính</a>
+                            </li>
+                            <li class="filter-item">
+                                <a href="#" class="filter-link">Toán học và Logic</a>
+                            </li>
+                            <li class="filter-item">
+                                <a href="#" class="filter-link">Khoa học</a>
+                            </li>
+                        </ul>
+                        <!-- end filter list -->
+
+                        <!-- alphabet -->
+                        <ul class="alphabet-list d-3xl-flex items-center flex-wrap mt-20">
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">A</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">B</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">C</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">D</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">E</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">F</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">G</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">H</a>
+                            </li>
+                            <li class="alphabet-item disable">
+                                <a href="#" class="alphabet-link">I</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">J</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">K</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">L</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">M</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">N</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">O</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">P</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">Q</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">R</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">S</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">T</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">U</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">V</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">W</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">X</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">Y</a>
+                            </li>
+                            <li class="alphabet-item">
+                                <a href="#" class="alphabet-link">Z</a>
+                            </li>
+                        </ul>
+                        <!-- end alphabet -->
+                    </div>
+                    <!-- end left -->
+                    <!-- right -->
+                    <div class="about-primary__right flex-0 w-35 mt-md-40 w-md-full">
+                        <img src="./images/person_5.png" alt="" class="h-full">
+                    </div>
+                    <!-- end right -->
+                </div>
+            </section>
+            <!-- end about primary -->
+
+            <!-- document primary -->
+            <section class="document-primary relative z-20 over-hidden w-wrapper bg-white">
+                <div class="document-primary__container w-1140 py-60 py-sm-40">
+                    <div class="document-primary__list d-3xl-grid d-sm-block col-4 gap-30">
+                        <!-- article -->
+                        <div class="article pr-30">
+                            <a href="#" class="article-category fs-12 text-black-50">Báo cáo</a>
+                            <h3 class="article-title fs-17 fw-500 lh-130 mt-8">
+                                <a href="#">Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ
+                                </a>
+                            </h3>
+                            <div class="article-des fs-15 mt-24 text-gray-44 lh-140">
+                                <p>
+                                    Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ là mẫu bảng được lập ra để ghi chép về việc chi khoa học và công nghệ. 
+                                </p>
+                            </div>
+                            <div class="article-download pt-40 fs-14 text-blue-0f6">
+                                <a href="#" class="d-3xl-flex items-center">
+                                    <span class="text fw-300">Tài liệu</span>
+                                    <div class="icon ml-8">
+                                        <img src="./images/svg/download-blue.svg" alt="" class="icon-16">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end article -->
+                        <!-- article -->
+                        <div class="article pr-30">
+                            <a href="#" class="article-category fs-12 text-black-50">Báo cáo</a>
+                            <h3 class="article-title fs-17 fw-500 lh-130 mt-8">
+                                <a href="#">Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ
+                                </a>
+                            </h3>
+                            <div class="article-des fs-15 mt-24 text-gray-44 lh-140">
+                                <p>
+                                    Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ là mẫu bảng được lập ra để ghi chép về việc chi khoa học và công nghệ. 
+                                </p>
+                            </div>
+                            <div class="article-download pt-40 fs-14 text-blue-0f6">
+                                <a href="#" class="d-3xl-flex items-center">
+                                    <span class="text fw-300">Tài liệu</span>
+                                    <div class="icon ml-8">
+                                        <img src="./images/svg/download-blue.svg" alt="" class="icon-16">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end article -->
+                        <!-- article -->
+                        <div class="article pr-30">
+                            <a href="#" class="article-category fs-12 text-black-50">Báo cáo</a>
+                            <h3 class="article-title fs-17 fw-500 lh-130 mt-8">
+                                <a href="#">Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ
+                                </a>
+                            </h3>
+                            <div class="article-des fs-15 mt-24 text-gray-44 lh-140">
+                                <p>
+                                    EThOsdo Thư viện Anh (Thư viện quốc gia của Liên hiệp Vương quốc Anh) xây dựng và phát triển. Dịch vụ ra đời cũng nhắm tạo ra điểm đến duy nhất để bạn đọc ở khắp nơi trên thế giới có thể tiếp cận những .. 
+                                </p>
+                            </div>
+                            <div class="article-download pt-40 fs-14 text-blue-0f6">
+                                <a href="#" class="d-3xl-flex items-center">
+                                    <span class="text fw-300">Tài liệu</span>
+                                    <div class="icon ml-8">
+                                        <img src="./images/svg/download-blue.svg" alt="" class="icon-16">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end article -->
+                        <!-- article -->
+                        <div class="article pr-30">
+                            <a href="#" class="article-category fs-12 text-black-50">Báo cáo</a>
+                            <h3 class="article-title fs-17 fw-500 lh-130 mt-8">
+                                <a href="#">Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ
+                                </a>
+                            </h3>
+                            <div class="article-des fs-15 mt-24 text-gray-44 lh-140">
+                                <p>
+                                    Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ là mẫu bảng được lập ra để ghi chép về việc chi khoa học và công nghệ. 
+                                </p>
+                            </div>
+                            <div class="article-download pt-40 fs-14 text-blue-0f6">
+                                <a href="#" class="d-3xl-flex items-center">
+                                    <span class="text fw-300">Tài liệu</span>
+                                    <div class="icon ml-8">
+                                        <img src="./images/svg/download-blue.svg" alt="" class="icon-16">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end article -->
+                        <!-- article -->
+                        <div class="article pr-30">
+                            <a href="#" class="article-category fs-12 text-black-50">Báo cáo</a>
+                            <h3 class="article-title fs-17 fw-500 lh-130 mt-8">
+                                <a href="#">Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ
+                                </a>
+                            </h3>
+                            <div class="article-des fs-15 mt-24 text-gray-44 lh-140">
+                                <p>
+                                    Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ là mẫu bảng được lập ra để ghi chép về việc chi khoa học và công nghệ. 
+                                </p>
+                            </div>
+                            <div class="article-download pt-40 fs-14 text-blue-0f6">
+                                <a href="#" class="d-3xl-flex items-center">
+                                    <span class="text fw-300">Tài liệu</span>
+                                    <div class="icon ml-8">
+                                        <img src="./images/svg/download-blue.svg" alt="" class="icon-16">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end article -->
+                        <!-- article -->
+                        <div class="article pr-30">
+                            <a href="#" class="article-category fs-12 text-black-50">Báo cáo</a>
+                            <h3 class="article-title fs-17 fw-500 lh-130 mt-8">
+                                <a href="#">Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ
+                                </a>
+                            </h3>
+                            <div class="article-des fs-15 mt-24 text-gray-44 lh-140">
+                                <p>
+                                    Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ là mẫu bảng được lập ra để ghi chép về việc chi khoa học và công nghệ. 
+                                </p>
+                            </div>
+                            <div class="article-download pt-40 fs-14 text-blue-0f6">
+                                <a href="#" class="d-3xl-flex items-center">
+                                    <span class="text fw-300">Tài liệu</span>
+                                    <div class="icon ml-8">
+                                        <img src="./images/svg/download-blue.svg" alt="" class="icon-16">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end article -->
+                        <!-- article -->
+                        <div class="article pr-30">
+                            <a href="#" class="article-category fs-12 text-black-50">Báo cáo</a>
+                            <h3 class="article-title fs-17 fw-500 lh-130 mt-8">
+                                <a href="#">Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ
+                                </a>
+                            </h3>
+                            <div class="article-des fs-15 mt-24 text-gray-44 lh-140">
+                                <p>
+                                    Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ là mẫu bảng được lập ra để ghi chép về việc chi khoa học và công nghệ. 
+                                </p>
+                            </div>
+                            <div class="article-download pt-40 fs-14 text-blue-0f6">
+                                <a href="#" class="d-3xl-flex items-center">
+                                    <span class="text fw-300">Tài liệu</span>
+                                    <div class="icon ml-8">
+                                        <img src="./images/svg/download-blue.svg" alt="" class="icon-16">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end article -->
+                        <!-- article -->
+                        <div class="article pr-30">
+                            <a href="#" class="article-category fs-12 text-black-50">Báo cáo</a>
+                            <h3 class="article-title fs-17 fw-500 lh-130 mt-8">
+                                <a href="#">Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ
+                                </a>
+                            </h3>
+                            <div class="article-des fs-15 mt-24 text-gray-44 lh-140">
+                                <p>
+                                    Biểu 03/KHCN-CP: Bảng chi cho khoa học và công nghệ là mẫu bảng được lập ra để ghi chép về việc chi khoa học và công nghệ. 
+                                </p>
+                            </div>
+                            <div class="article-download pt-40 fs-14 text-blue-0f6">
+                                <a href="#" class="d-3xl-flex items-center">
+                                    <span class="text fw-300">Tài liệu</span>
+                                    <div class="icon ml-8">
+                                        <img src="./images/svg/download-blue.svg" alt="" class="icon-16">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end article -->
+                        
+                    </div>
+
+                    <!-- pagination -->
+                    <ul class="pagination d-3xl-flex d-md-none items-center justify-end fs-14 lh-160 uppercase fw-500 text-gray-66 mt-30">
+                        <li class="pagination-item active">
+                            <a href="#" class="pagination-link">01</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-link">01</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-link">01</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-link">01</a>
+                        </li>
+                    </ul>
+                    <!-- end pagination -->
+
+                    <!-- see more -->
+                    <div class="see-more d-3xl-flex items-center justify-center my-20">
+                        <button class="bg-blue-001 px-15 py-10 text-white fw-500 border-4 lh-150">
+                            Xem thêm
+                        </button>
+                    </div>
+                    <!-- end see more -->
+                </div>
+            </section>
+            <!-- end document primary-->
+
+            <!-- senary -->
+            <section class="section-senary relative z-20 over-hidden w-wrapper bg-black-191">
+                <div class="section-senary__container w-1140 py-60 py-sm-40">
+                    <!-- top -->
+                    <div class="section-senary__top d-3xl-flex">
+                        <!-- left -->
+                        <div class="left flex-1 py-40 pl-40 pr-20">
+                            <!-- heading -->
+                            <h2 class="heading-primary fs-40 fw-500 text-white">Giới thiệu <br> EduChat</h2>
+                            <!-- end heading -->
+
+                            <!-- content -->
+                            <div class="content d-3xl-flex d-sm-block items-center mt-24 justify-between fs-14 text-white-85 lh-160 fw-300 gap-20">
+                                <div class="flex-1">
+                                    <p>Edu Chat là một hệ thống đào tạo trực tuyến, cổng kết nối Chuyên gia với Học viên</p>
+                                    <p class="mt-24">
+                                        Sứ mệnh của Unica là chia sẻ kiến thức thực tiễn tới 10 triệu người dân Việt Nam
+                                    </p>
+                                </div>
+                                <div class="flex-1">
+                                    <p>Giờ đây học viên có thể học trực tuyến các bài học của hệ thống Unica mà không cần tới máy tính, vì chỉ với một chiếc smartphone học viên vẫn có thể học được các khoá học một cách thuận tiện nhất với mọi chức năng tương tự trên web.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- content -->
+                        </div>
+                        <!-- end left -->
+                        <!-- right -->
+                        <div class="right flex-0 w-40 relative over-hidden">
+                            <div class="section-senary__bg">
+                                <img src="./images/person_2.png" alt="">
+                            </div>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                    <!-- end top -->
+
+                    <!-- btn -->
+                    <div class="section-senary__btn mt-24 d-3xl-flex items-center flex-end">
+                        <a href="#" class="section-quinary__link btn-blue py-12 px-16 d-3xl-flex items-center gap-20">
+                            <span class="text-white-85 fs-16 flex-1">Xem chi tiết</span>
+                            <img src="./images/svg/arrow-next-w-2.svg" alt="" class="flex-0 icon-20">
+                        </a>
+                    </div>
+                    <!-- end btn -->
+                </div>
+            </section>
+            <!-- end senary -->
+           
+            <!-- septernary -->
+            <section class="section-septernary relative z-20 over-hidden w-wrapper bg-gray-e8">
+                <div class="section-septernary__container w-1140 py-60 py-sm-40 d-3xl-flex d-md-block items-center">
+                   <!-- left -->
+                   <div class="section-septernary__left flex-1 pr-40">
+                        <h2 class="heading-primary fs-40 fw-500">Liên hệ</h2>
+                        <div class="txt mt-40">
+                            <h3 class="title fs-17 fw-500">CÔNG TY CỔ PHẦN GIA ĐÌNH MỚI</h3>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Giấy phép thiết lập MXH số …/GP-BTTTT, do Bộ Thông tin và Truyền thông cấp ngày….</p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Chịu trách nhiệm: <strong>Nguyễn Quyết</strong> </p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Hotline:</p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Địa chỉ:</p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Văn phòng làm việc:</p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Email: educhat.vn@gmail.com</p>
+                        </div>
+                   </div>
+                   <!-- end left -->
+                   <!-- right -->
+                   <div class="section-septernary__right flex-0 mt-md-40">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1120315029334!2d105.78825837584134!3d21.02820288779654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4ee3d2b0f7%3A0x5ae05f0cc5533cd8!2zQ8O0bmcgdmnDqm4gQ-G6p3UgR2nhuqV5!5e0!3m2!1svi!2s!4v1744265206620!5m2!1svi!2s" width="730" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   </div>
+                   <!-- end right -->
+                </div>
+            </section>
+            <!-- end quinary -->
+
+        </main>
+        <!-- end main -->
+        <!-- footer -->
+        <footer id="footer" class="footer z-20 relative bg-white w-wrapper">
+            <!-- container -->
+            <div class="footer-container w-1140 d-3xl-flex d-md-block items-center justify-between gap-20 py-24">
+                <!-- left -->
+                <div class="footer-left d-3xl-flex d-sm-block items-center">
+                    <!-- logo -->
+                    <div class="footer-logo mr-30">
+                        <a href="#">
+                            <img src="./images/svg/logo_3.svg" alt="">
+                        </a>
+                    </div>
+                    <!-- end logo -->
+                    <p class="text-gray-44 fs-15 mt-sm-20">® EduCHAT giữ bản quyền nội dung trên website này</p>
+                </div>
+                <!-- end left -->
+                <!-- right -->
+                <div class="footer-right mt-md-40">
+                    <!-- social -->
+                    <ul class="social d-3xl-flex items-center justify-center">
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/fb-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/tiktok-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/ytb-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/Twitter-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/instagram-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- end social -->
+                </div>
+                <!-- end right -->
+            </div>
+            <!-- end container -->
+            <!-- back top -->
+            <div id="back-top">
+                <img src="./images/svg/arrow-top-w.svg" alt="">
+            </div>
+            <!-- end back top -->
+        </footer>
+        <!-- end footer -->
+        <script src="./lib/swiper/swiper-bundle.min.js"></script>
+        <script src="./js/ResizeSensor.js"></script>
+        <script src="./js/theia-sticky-sidebar.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
