@@ -324,6 +324,64 @@
 
     }
 }
+
+.course-02-secondary {
+    &__listLecture {
+        max-height: 500px;
+        overflow: auto;
+    }
+
+    &__itemLecture {
+        background-color: #fff;
+        &.active,
+        &:hover {
+            background-color: #f6f6fa;
+        }
+
+    }
+
+    &__lecture {
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+}
+
+.rating {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-align: center;
+
+    input {
+      display: none;
+    }
+    
+    label {
+      font-size: 40px;
+      color: #ccc;
+      cursor: pointer;
+    }
+    
+    label::before {
+      content: '★';
+    }
+    
+    input:checked ~ label {
+      color: #FF6A00; 
+    }
+    
+    label:hover,
+    label:hover ~ label {
+      color: #FF6A00;
+    }
+  }
+  
+  
+  
 /*--------------------------------------- student*/
 /*--------------------------------------- lecture*/
 /*--------------------------------------- document*/

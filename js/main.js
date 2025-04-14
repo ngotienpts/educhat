@@ -388,81 +388,57 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // xử lý sự kiện để show popupLogin
-    function handleShowPopupLogin() {
-        const showPopupLogins = document.querySelectorAll(".js__showPopupLogin");
-        const popupLoginContainer = document.querySelector(".js__popupLoginContainer");
+    // xử lý sự kiện để show popup
+    function handleShowPopup() {
+        const showPopups = document.querySelectorAll(".js__showPopup");
+        const popupContainer = document.querySelector(".js__popupContainer");
 
-        if(popupLoginContainer && showPopupLogins) {
+        if(popupContainer && showPopups) {
 
-            const popupLogin = popupLoginContainer.querySelector(".js__popupLogin");
-            const closePopupLogin = popupLoginContainer.querySelector(".js__closePopupLogin");
-            const overlay = popupLoginContainer.querySelector(".js__overlay");
+            const popup = popupContainer.querySelector(".js__popup");
+            const closePopup = popupContainer.querySelector(".js__closePopup");
+            const overlay = popupContainer.querySelector(".js__overlay");
             
-            if (showPopupLogins.length === 0) return;
+            if (showPopups.length === 0) return;
 
                 
-            showPopupLogins.forEach((showPopupLogin)=>{
+            showPopups.forEach((showPopup)=>{
 
-                showPopupLogin.onclick = function() {
-                    popupLogin.classList.add('active')
+                showPopup.onclick = function() {
+                    popup.classList.add('active')
                     overlay.classList.add('active')
                     document.querySelector("body").style.overflow = "hidden";
                 }
     
-                closePopupLogin.onclick = function () {
+                closePopup.onclick = function () {
                     document.querySelector("body").style.overflow = "auto";
-                    popupLogin.classList.remove('active')
+                    popup.classList.remove('active')
                     overlay.classList.remove('active')
-                    loginForm.classList.add('active')
-                    registerForm.classList.remove('active')
-                    forgotForm.classList.remove('active')
                 };
     
                 overlay.onclick = function () {
                     this.classList.remove("active");
                     document.querySelector("body").style.overflow = "auto";
-                    popupLogin.classList.remove('active');
-                    loginForm.classList.add('active')
-                    registerForm.classList.remove('active')
-                    forgotForm.classList.remove('active')
-                };
+                    popup.classList.remove('active');
+                }; 
 
-                // change form login register forgot
-                const loginContainerForm = document.querySelector(".js__loginContainerForm");
-
-                if(!loginContainerForm) return
-
-                const loginForm = loginContainerForm.querySelector('.js__loginForm')
-                const registerForm = loginContainerForm.querySelector('.js__registerForm')
-                const forgotForm = loginContainerForm.querySelector('.js__forgotForm')
-
-                const loginBtn = registerForm.querySelector('.js__loginBtn')
-                const registerBtn = loginForm.querySelector('.js__registerBtn')
-                const forgotBtn = loginForm.querySelector('.js__forgotBtn')
-                
-                // login
-                registerBtn.onclick = function() {
-                    loginForm.classList.remove('active')
-                    registerForm.classList.add('active')
-                    forgotForm.classList.remove('active')
-                }
-                // register
-                loginBtn.onclick = function() {
-                    registerForm.classList.remove('active')
-                    loginForm.classList.add('active')
-                }
-                // forgot
-                forgotBtn.onclick = function() {
-                    loginForm.classList.remove('active')
-                    forgotForm.classList.add('active')
-                }
             })
 
             
         }
         
         
+    }
+
+    // xử lý rating
+    function handleRating() {
+        const ratingInputs = document.querySelectorAll('input[name="points"]');
+
+        ratingInputs.forEach(input => {
+            input.addEventListener('change', () => {
+            console.log("Bạn đã chọn số sao:", input.value);
+            });
+        });
     }
     
     // xử lý sự kiện collapse
@@ -690,10 +666,12 @@ document.addEventListener("DOMContentLoaded", function () {
         handleShowDropdownSubMenu();
         handleShowSearchMb();
         handleNavbarMb();
-        handleShowPopupLogin();
+        handleShowPopup();
         handleShowDropdown();
         handleCollapse();
         handleLanguageSwitch();
+        handleVideo_16x9();
+        handleRating();
         // slide
         initSliderAutoItems();
         initSliderOneItems();
