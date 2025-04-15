@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+        <!-- end favicon -->
+        <title>EduChat</title>
+        <!-- font -->
+       
+        <!-- end font -->
+        <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./lib/jquery/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+        <!-- ads center  -->
+        <div class="ads-center w-1920">
+            <img src="./images/ads_top.png" alt="">
+        </div>
+        <!-- end ads center  -->
+
+        <!-- popup rating -->
+        <div class="popup-wrapper" style="position: relative;z-index: 1000;">
+            <div class="js__popupContainer">
+                <div class="content text-white js__popup">
+                    <!-- top -->
+                    <div class="content-top d-3xl-flex items-center justify-between border-b-e5 pb-16 w-full">
+                        <div class="content-top__logo flex-0">
+                            <img src="./images/svg/logo_2.svg" alt="">
+                        </div>
+                        <div class="content-top__close pointer js__closePopup">
+                            <img src="./images/svg/close-gray.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- end top -->
+    
+                    <!-- main -->
+                    <div class="content-main w-full js__loginContainerForm">
+                        <!-- register -->
+                        <div class="content-main__register active js__registerForm mt-20">
+                            <h2 class="fs-40 text-center text-black fw-500">Đánh giá</h2>
+                            <div class="mt-15 text-gray-44 fs-16 text-center">
+                                <p>Bạn đánh giá giảng viên <strong>'Ts. Lê Thẩm Dương'</strong> mấy điểm trên 5?
+                                </p>
+                                
+                            </div>
+
+                            <!-- vote -->
+                            <div class="voting-container mt-12">
+                                <form id="voting" class="voting-form">	
+                                    <div class="rating">
+                                        <input type="radio" name="points" value="5" id="p-5">
+                                        <label for="p-5" title="5 sao"></label>
+                                      
+                                        <input type="radio" name="points" value="4" id="p-4">
+                                        <label for="p-4" title="4 sao"></label>
+                                      
+                                        <input type="radio" name="points" value="3" id="p-3">
+                                        <label for="p-3" title="3 sao"></label>
+                                      
+                                        <input type="radio" name="points" value="2" id="p-2">
+                                        <label for="p-2" title="2 sao"></label>
+                                      
+                                        <input type="radio" name="points" value="1" id="p-1">
+                                        <label for="p-1" title="1 sao"></label>
+                                    </div>
+                                    <div class="voting-btn mt-40 d-3xl-flex items-center justify-center pointer">
+                                        <button class="section-primary__link btn-danger bg-red-ed py-12 px-16 d-3xl-flex items-center gap-20">
+                                            <span class="text-white-85 fs-16 flex-1">Gửi đánh giá</span>
+                                            <img src="./images/svg/arrow-next-w-2.svg" alt="" class="flex-0 icon-20">
+                                        </button>
+                                    </div>
+                                </form>
+
+                            </div>
+                            <!-- end vote -->
+                        </div>
+                        <!-- end register -->
+                    </div>
+                    <!-- end main -->
+                </div>
+                <div class="overlay js__overlay"></div>
+            </div>
+        </div>
+        <!-- end popup rating -->
+
+        <!-- header -->
+        <header id="header" class="header relative js__stickyHeader">
+            <!-- pc -->
+            <div class="d-3xl-block d-lg-none">
+                <div class="header-pc bg-blue-001 w-wrapper">
+                    <!-- container -->
+                    <div class="header-pc__container w-1140 d-3xl-flex d-md-block items-center justify-between gap-20">
+                        <!-- left -->
+                        <div class="header-pc__left flex-0">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="./images/svg/logo_1.svg" alt="">
+                                </a>
+                            </div>
+                            <!-- end logo -->
+                        </div>
+                        <!-- end left -->
+
+                        <!-- right -->
+                        <div class="header-pc__right flex-1">
+                            <!-- top -->
+                            <div class="header-pc__top d-3xl-flex items-center pt-20 pb-12">
+                                <!-- social -->
+                                <ul class="social d-3xl-flex items-center">
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/fb-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/tiktok-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/ytb-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/twitter-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/instagram-w.svg" loading="lazy" alt="" width="" height="">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- end social -->
+                                <!-- login -->
+                                <div class="login ml-16">
+                                    <!-- not logged -->
+                                    <div class="not-logged">
+                                        <!-- icon -->
+                                        <div class="login-icon">
+                                            <img src="./images/svg/user-w.svg" alt="">
+                                        </div>
+                                        <!-- end icon -->
+                                        
+                                    </div>
+                                    <!-- end not logged -->
+                                    
+                                    <!-- logged -->
+                                    <div class="logged d-3xl-none">
+                                        <div class="logged-container relative js__dropdownContainer">
+                                            <div class="logged-heading d-3xl-flex items-center js__showDropdown">
+                                                <h3 class="text fs-14 text-white fw-600 d-sm-none">Thanh Hoài</h3>
+                                                <div class="avatar ml-4">
+                                                    <img src="./images/3.jpg" alt="">
+                                                </div>
+                                                <div class="icon ml-4">
+                                                    <img src="./images/svg/Polygon-down-w.svg" alt="">
+                                                </div>
+                                            </div>
+                
+                                            <ul class="logged-content absolute dropdownContent js__dropdownContent">
+                                                <li class="logged-item"><a href="#" class="logged-link">Tài khoản</a></li>
+                                                <li class="logged-item log-out">Đăng xuất</li>
+                                            </ul>
+                
+                                            <div class="overlay js__overlay"></div>
+                                        </div>
+                                    </div>
+                                    <!-- end logged -->
+                                </div>
+                                <!-- end login -->
+                                <!-- language -->
+                                <div class="language fs-14 js__languageContainer text-white font-arial fw-700 ml-15">
+                                    <div class="language-default d-3xl-flex items-center js__languageDefault">
+                                        <div class="language-default__item d-3xl-flex items-center mr-4 js__languageDefaultText">
+                                            <span class="language-text d-3xl-inline mr-4">En</span>
+                                            <img src="./images/flag_2.png" class="language-img" alt="">
+                                        </div>
+                                        <div class="language-down">
+                                            <img src="./images/svg/Polygon-down-w.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="language-list">
+                                        <!-- item -->
+                                        <div class="language-item d-3xl-flex items-center js__languageItem">
+                                            <span class="language-text d-3xl-inline mr-4">En</span>
+                                            <img src="./images/flag_2.png" class="language-img" alt="">
+                                        </div>
+                                        <!-- end item -->
+                                        <!-- item -->
+                                        <div class="language-item d-3xl-flex items-center js__languageItem">
+                                            <span class="language-text d-3xl-inline mr-4">Vi</span>
+                                            <img src="./images/flag_1.png" class="language-img" alt="">
+                                        </div>
+                                        <!-- end item -->
+                                    </div>
+                                    <div class="overlay js__overlay"></div>
+                                </div>
+                                <!-- end language -->
+                            </div>
+                            <!-- end top -->
+
+                            <!-- navbar -->
+                            <nav class="navbar">
+                                <ul class="navbar-list d-3xl-flex items-center fs-15 text-white gap-40 pt-8">
+                                    <li class="navbar-item active">
+                                        <a href="#">Trang chủ</a>
+                                        
+                                    </li>
+                                    <li class="navbar-item">
+                                        <a href="#">Bài viết</a>
+                                        <ul class="navbar-dropdown">
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <a href="#">Hồ sơ</a>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <a href="#">Khóa học</a>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <a href="#">Giới thiệu</a>
+                                    </li>
+                                 
+                                    <li class="navbar-item">
+                                        <a href="#">Đăng ký</a>
+                                        <ul class="navbar-dropdown">
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#">Cate 1</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- end navbar -->
+                        </div>
+                        <!-- end right -->
+                    </div>
+                    <!-- end container -->
+                </div>
+                
+            </div>
+            <!-- end pc -->
+
+            <!-- mb -->
+            <div class="d-3xl-none d-lg-block">
+                <!--  -->
+                <div class="header-pc__top bg-blue-001 d-3xl-flex items-center p-15">
+                    <!-- social -->
+                    <ul class="social d-3xl-flex items-center">
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/fb-w.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/tiktok-w.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/ytb-w.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/twitter-w.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/instagram-w.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- end social -->
+                    <!-- login -->
+                    <div class="login ml-16">
+                        <!-- not logged -->
+                        <div class="not-logged">
+                            <!-- icon -->
+                            <div class="login-icon">
+                                <img src="./images/svg/user-w.svg" alt="">
+                            </div>
+                            <!-- end icon -->
+                            
+                        </div>
+                        <!-- end not logged -->
+                        
+                        <!-- logged -->
+                        <div class="logged d-3xl-none">
+                            <div class="logged-container relative js__dropdownContainer">
+                                <div class="logged-heading d-3xl-flex items-center js__showDropdown">
+                                    <h3 class="text fs-14 text-white fw-600 d-sm-none">Thanh Hoài</h3>
+                                    <div class="avatar ml-4">
+                                        <img src="./images/3.jpg" alt="">
+                                    </div>
+                                    <div class="icon ml-4">
+                                        <img src="./images/svg/Polygon-down-w.svg" alt="">
+                                    </div>
+                                </div>
+    
+                                <ul class="logged-content absolute dropdownContent js__dropdownContent">
+                                    <li class="logged-item"><a href="#" class="logged-link">Tài khoản</a></li>
+                                    <li class="logged-item log-out">Đăng xuất</li>
+                                </ul>
+    
+                                <div class="overlay js__overlay"></div>
+                            </div>
+                        </div>
+                        <!-- end logged -->
+                    </div>
+                    <!-- end login -->
+                    <!-- language -->
+                    <div class="language fs-14 js__languageContainer text-white font-arial fw-700 ml-15">
+                        <div class="language-default d-3xl-flex items-center js__languageDefault">
+                            <div class="language-default__item d-3xl-flex items-center mr-4 js__languageDefaultText">
+                                <span class="language-text d-3xl-inline mr-4">En</span>
+                                <img src="./images/flag_2.png" class="language-img" alt="">
+                            </div>
+                            <div class="language-down">
+                                <img src="./images/svg/Polygon-down-w.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="language-list">
+                            <!-- item -->
+                            <div class="language-item d-3xl-flex items-center js__languageItem">
+                                <span class="language-text d-3xl-inline mr-4">En</span>
+                                <img src="./images/flag_2.png" class="language-img" alt="">
+                            </div>
+                            <!-- end item -->
+                            <!-- item -->
+                            <div class="language-item d-3xl-flex items-center js__languageItem">
+                                <span class="language-text d-3xl-inline mr-4">Vi</span>
+                                <img src="./images/flag_1.png" class="language-img" alt="">
+                            </div>
+                            <!-- end item -->
+                        </div>
+                        <div class="overlay js__overlay"></div>
+                    </div>
+                    <!-- end language -->
+                </div>
+                <!--  -->
+                <!-- top -->
+                <div class="header-mb-top w-wrapper bg-blue-001 relative py-10 bg-green-009">
+                    <div class="header-mb-top__container w-1140 d-3xl-flex items-center justify-between w-full">
+                        <!-- sub menu -->
+                        <div class="sub-menu">
+                            <!-- icon bar -->
+                            <div class="icon-bar js__clickShowMenuMb px-15 py-10">
+                                <img src="./images/svg/bar-w.svg" alt="" class="icon-20">
+                            </div>
+                            <!-- end icon bar -->
+                            <!-- content -->
+                            <div class="sub-menu__content">
+                                <!-- close -->
+                                <div class="sub-menu__close js__closeSubMenu h-56 p-4 mb-8 d-3xl-flex items-center text-white">
+                                    <img src="./images/svg/close-w.svg" alt="">
+                                </div>
+                                <!-- end close -->
+
+                                <div class="sub-menu__container">
+                                    <!-- list -->
+                                    <div class="sub-menu__list">
+                                        <!-- item -->
+                                        <div class="sub-menu__item">
+                                            <!-- heading -->
+                                            <div class="heading-sub js__dropDown d-3xl-flex items-center justify-between px-16 py-8 text-white">
+                                                <h3 class="heading-sub__title fs-16 fw-500">
+                                                    Movies
+                                                </h3>
+                                                <div class="heading-sub__arrow">
+                                                    <img src="./images/svg/arrow-down-w.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <!-- end heading -->
+
+                                            <!-- sub menu list -->
+                                            <ul class="list-sub js__listSubMenu" style="">
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                
+                                            </ul>
+                                            <!-- end sub menu list -->
+                                        </div>
+                                        <!-- end item -->
+                                        <!-- item -->
+                                        <div class="sub-menu__item">
+                                            <!-- heading -->
+                                            <div class="heading-sub js__dropDown d-3xl-flex items-center justify-between px-16 py-8 text-white">
+                                                <h3 class="heading-sub__title fs-16 fw-500">
+                                                    Movies
+                                                </h3>
+                                                <div class="heading-sub__arrow">
+                                                    <img src="./images/svg/arrow-down-w.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <!-- end heading -->
+
+                                            <!-- sub menu list -->
+                                            <ul class="list-sub js__listSubMenu" style="">
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                <li class="item-sub">
+                                                    <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                </li>
+                                                
+                                            </ul>
+                                            <!-- end sub menu list -->
+                                        </div>
+                                        <!-- end item -->
+                                    </div>
+                                    <!-- end list -->
+                                </div>
+                            </div>
+                            <!-- end content -->
+                            <div class="overlay js__overlay"></div>
+                        </div>
+                        <!-- end sub menu -->
+                        <!-- logo -->
+                        <div class="logo mx-auto">
+                            <a href="#" class="logo-link">
+                                <img src="./images/svg/logo_1.svg" alt="" class="logo-img mx-auto"/>
+                            </a>
+                            
+                        </div>
+                        <!-- end logo -->
+
+                        <!-- search -->
+                        <div class="search-mb relative pl-15">
+                            <div class="search-mb__icon js__searchMb">
+                                <img src="./images/svg/search-w.svg" alt="" class="icon-20"/>
+                            </div>
+                        </div>
+                        <!-- form -->
+                        <div class="header-search-mb__form h-60 w-full js__formSearchMb shadow">
+                            <form action="" class="w-full h-full">
+                                <div class="relative w-full h-full">
+                                    <input type="text" class="header-search-input w-full h-full p-8 fs-16 js__focusSearchMb" placeholder="Search..."/>
+                                    <div class="header-search-btn btn absolute h-full js__closeSearchMb">
+                                        <img src="./images/svg/close-gray.svg" alt=""/>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- end form -->
+                        <!-- end search -->
+                    </div>
+                </div>
+                <!-- end top -->
+
+            </div>
+            <!-- end mb -->
+        </header>
+        <!-- end header -->
+        <!-- main -->
+        <main id="main" class="main">
+           
+            <!-- breadcrumb primary -->
+            <div class="breadcrumb-primary relative w-wrapper z-10 over-hidden py-20 bg-gradient-2">
+                <div class="breadcrumb-primary__container w-1140 w-md-500 border-b-e5 pb-20">
+                    <ul class="breadcrumb-primary__list d-3xl-flex items-center">
+                        <li class="breadcrumb-primary__item fs-15 fw-500">
+                            <a href="#" class="breadcrumb-primary__link">Trang chủ</a>
+                        </li>
+                        <li class="breadcrumb-primary__item fs-15 fw-500 active">
+                            <a href="#" class="breadcrumb-primary__link">Chứng chỉ Chuyên môn Google UX Design
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end breadcrumb primary -->
+
+            <!-- course-01 primary -->
+            <section class="course-01-primary about-primary relative z-20 over-hidden w-wrapper bg-gradient-2">
+                <div class="course-01-primary__container about-primary__container w-1140 w-md-500 d-3xl-flex items-center d-md-block gap-20 py-10">
+                    <!-- left -->
+                    <div class="about-primary__left flex-1">
+                        <div class="course-01-primary__content">
+                            <!-- title -->
+                            <h1 class="title fs-36 fw-500">Chứng chỉ Chuyên môn Google UX Design
+                            </h1>
+                            <!-- end title -->
+
+                            <!-- info -->
+                            <div class="course-01-primary__info mt-24">
+                                <!-- stars -->
+                                <div class="total-stars d-3xl-flex items-center">
+                                    <span class="total-star__text fs-14 text-gray-82">4.5</span>
+                                    <div class="total-star__icon ml-8 d-3xl-flex items-center">
+                                        <img src="./images/svg/start-yellow.svg" alt="" class="icon-16">
+                                        <img src="./images/svg/start-yellow.svg" alt="" class="icon-16">
+                                        <img src="./images/svg/start-yellow.svg" alt="" class="icon-16">
+                                        <img src="./images/svg/start-yellow.svg" alt="" class="icon-16">
+                                        <img src="./images/svg/half-star-yellow.svg" alt="" class="icon-16">
+                                    </div>
+                                </div>
+                                <!-- end stars -->
+
+                                <!-- teacher -->
+                                <div class="teacher d-3xl-flex items-center fs-14 text-gray-82 mt-8">
+                                    <span>Giảng viên: </span>
+                                    <a href="#" class="fw-500 ml-8">Nguyễn Văn A</a>
+                                </div>
+                                <!-- end teacher -->
+
+                                <div class="vote d-3xl-flex items-center mt-8 pointer js__showPopup">
+                                    <span class="fs-14 text-blue-0f6">Thêm đánh giá</span>
+                                    <div class="ml-8">
+                                        <img src="./images/svg/start-yellow.svg"  alt="" class="icon-16">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end info -->
+
+                            <h2 class="title-sub fs-17 fw-500 mt-12">Build Dynamic User Interfaces (UI) for Websites</h2>
+                        </div>
+                    </div>
+                    <!-- end left -->
+                    <!-- right -->
+                    <div class="about-primary__right flex-0 w-35 mt-md-40 w-md-full">
+                        <img src="./images/ux-design-2.png" alt="" class="h-full">
+                    </div>
+                    <!-- end right -->
+                </div>
+            </section>
+            <!-- end course-01 primary -->
+
+         
+            <!-- course-01 secondary -->
+            <section class="about-secondary course-02-secondary relative z-20 over-hidden w-wrapper bg-white">
+                <div class="about-secondary__container course-02-secondary__container w-1140 w-md-500 py-60 py-sm-40 d-3xl-flex d-md-block gap-40">
+                    <!-- left -->
+                    <div class="about-secondary__left course-02-secondary__left flex-0 w-30 w-md-full">
+
+                        <!-- info -->
+                        <div class="author-info-primary">
+                            <div class="about-secondary__item js__collapseContainer active">
+                                <!-- top -->
+                                <div class="children-top d-3xl-flex items-center justify-between js__collapse border-b-e5 mb-24 pb-24">
+                                    <div class="text d-3xl-flex items-center flex-1 fw-600 text-gray-44">
+                                        <span>Menu</span>
+                                    </div>
+                                    <div class="icon flex-0">
+                                        <div class="icon-minus">
+                                            <img src="./images/svg/minus.svg" alt="">
+                                        </div>
+                                        <div class="icon-plus">
+                                            <img src="./images/svg/plus.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end top -->
+                                
+                                <!-- content -->
+                                <div class="children-content text-gray-44 fs-16 lh-160">
+                                    <!-- lecture one -->
+                                    <div class="course-02-secondary__lecture py-30 border-b-e5">
+                                        <h3 class="course-02-secondary__titleLecture fs-18 fw-500">Giới thiệu về khóa học</h3>
+    
+                                        <div class="course-02-secondary__listLecture mt-24">
+                                            <!-- item -->
+                                            <div class="course-02-secondary__itemLecture d-3xl-flex px-10 py-8 active bg-gray-f6 pointer">
+                                                <!-- icon -->
+                                                <div class="course-02-secondary__icon flex-0 mt-4">
+                                                    <img src="./images/svg/check-green.svg" alt="" class="icon-20">
+                                                </div>
+                                                <!-- end icon -->
+    
+                                                <!-- text -->
+                                                <div class="course-02-secondary__textList flex-1 pl-10">
+                                                    <h3 class="fs-16"><strong>Video:</strong> Giới thiệu về Khóa học 2: Đồng cảm, Xác định và Tạo ý tưởng </h3>
+                                                    <span class="text-gray-99 fs-16 d-3xl-block mt-10">2 phút</span>
+                                                </div>
+                                                <!-- end text -->
+                                            </div>
+                                            <!-- end item -->
+                                            <!-- item -->
+                                            <div class="course-02-secondary__itemLecture d-3xl-flex px-10 py-8 bg-wgite pointer">
+                                                <!-- icon -->
+                                                <div class="course-02-secondary__icon flex-0 mt-4">
+                                                    <img src="./images/svg/icon-video-blue.svg" alt="" class="icon-20">
+                                                </div>
+                                                <!-- end icon -->
+    
+                                                <!-- text -->
+                                                <div class="course-02-secondary__textList flex-1 pl-10">
+                                                    <h3 class="fs-16"><strong>Video:</strong> Chào mừng đến với khóa 2</h3>
+                                                    <span class="text-gray-99 fs-16 d-3xl-block mt-10">2 phút</span>
+                                                </div>
+                                                <!-- end text -->
+                                            </div>
+                                            <!-- end item -->
+                                            <!-- item -->
+                                            <div class="course-02-secondary__itemLecture d-3xl-flex px-10 py-8 bg-wgite pointer">
+                                                <!-- icon -->
+                                                <div class="course-02-secondary__icon flex-0 mt-4">
+                                                    <img src="./images/svg/pencil_.svg" alt="" class="icon-20">
+                                                </div>
+                                                <!-- end icon -->
+    
+                                                <!-- text -->
+                                                <div class="course-02-secondary__textList flex-1 pl-10">
+                                                    <h3 class="fs-16"><strong>Hỏi đáp:</strong> Gửi lời nhắc lựa chọn dự án danh mục đầu tư của bạn</h3>
+                                                    <span class="text-gray-99 fs-16 d-3xl-block mt-10">2 phút</span>
+                                                </div>
+                                                <!-- end text -->
+                                            </div>
+                                            <!-- end item -->
+                                        </div>
+                                    </div>
+                                    <!-- end  lecture one -->
+                                    <!-- lecture one -->
+                                    <div class="course-02-secondary__lecture py-30 border-b-e5">
+                                        <h3 class="course-02-secondary__titleLecture fs-18 fw-500">Tìm hiểu về danh mục thiết kế UX</h3>
+    
+                                        <div class="course-02-secondary__listLecture mt-24">
+                                            <!-- item -->
+                                            <div class="course-02-secondary__itemLecture d-3xl-flex px-10 py-8 bg-white pointer">
+                                                <!-- icon -->
+                                                <div class="course-02-secondary__icon flex-0 mt-4">
+                                                    <img src="./images/svg/icon-video-blue.svg" alt="" class="icon-20">
+                                                </div>
+                                                <!-- end icon -->
+    
+                                                <!-- text -->
+                                                <div class="course-02-secondary__textList flex-1 pl-10">
+                                                    <h3 class="fs-16"><strong>Video:</strong> Giới thiệu về Khóa học 2: Đồng cảm, Xác định và Tạo ý tưởng </h3>
+                                                    <span class="text-gray-99 fs-16 d-3xl-block mt-10">2 phút</span>
+                                                </div>
+                                                <!-- end text -->
+                                            </div>
+                                            <!-- end item -->
+                                            <!-- item -->
+                                            <div class="course-02-secondary__itemLecture d-3xl-flex px-10 py-8 bg-wgite pointer">
+                                                <!-- icon -->
+                                                <div class="course-02-secondary__icon flex-0 mt-4">
+                                                    <img src="./images/svg/pencil_.svg" alt="" class="icon-20">
+                                                </div>
+                                                <!-- end icon -->
+    
+                                                <!-- text -->
+                                                <div class="course-02-secondary__textList flex-1 pl-10">
+                                                    <h3 class="fs-16"><strong>Hỏi đáp:</strong> Gửi lời nhắc lựa chọn dự án danh mục đầu tư của bạn</h3>
+                                                    <span class="text-gray-99 fs-16 d-3xl-block mt-10">2 phút</span>
+                                                </div>
+                                                <!-- end text -->
+                                            </div>
+                                            <!-- end item -->
+                                            <!-- item -->
+                                            <div class="course-02-secondary__itemLecture d-3xl-flex px-10 py-8 bg-wgite pointer">
+                                                <!-- icon -->
+                                                <div class="course-02-secondary__icon flex-0 mt-4">
+                                                    <img src="./images/svg/icon-video-blue.svg" alt="" class="icon-20">
+                                                </div>
+                                                <!-- end icon -->
+    
+                                                <!-- text -->
+                                                <div class="course-02-secondary__textList flex-1 pl-10">
+                                                    <h3 class="fs-16"><strong>Video:</strong> Chào mừng đến với khóa 2</h3>
+                                                    <span class="text-gray-99 fs-16 d-3xl-block mt-10">2 phút</span>
+                                                </div>
+                                                <!-- end text -->
+                                            </div>
+                                            <!-- end item -->
+                                            <!-- item -->
+                                            <div class="course-02-secondary__itemLecture d-3xl-flex px-10 py-8 bg-wgite pointer">
+                                                <!-- icon -->
+                                                <div class="course-02-secondary__icon flex-0 mt-4">
+                                                    <img src="./images/svg/pencil_.svg" alt="" class="icon-20">
+                                                </div>
+                                                <!-- end icon -->
+    
+                                                <!-- text -->
+                                                <div class="course-02-secondary__textList flex-1 pl-10">
+                                                    <h3 class="fs-16"><strong>Hỏi đáp:</strong> Gửi lời nhắc lựa chọn dự án danh mục đầu tư của bạn</h3>
+                                                    <span class="text-gray-99 fs-16 d-3xl-block mt-10">2 phút</span>
+                                                </div>
+                                                <!-- end text -->
+                                            </div>
+                                            <!-- end item -->
+                                        </div>
+                                    </div>
+                                    <!-- end  lecture one -->
+                                    
+                                </div>
+                                <!-- end content -->
+                            </div>
+                        </div>
+                        <!-- end info -->
+                    </div>
+                    <!-- end left -->
+                    <!-- right -->
+                    <div class="about-secondary__right course-content detail-content course-02-secondary__right flex-1 mt-md-40 js__video169">
+
+                        <!-- video -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0rrwtZyLvSE?si=HVvqsTe18_3gcExZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <!-- end video -->
+                        <!-- list -->
+                        <div class="about-secondary__list">
+                            <!-- item -->
+                            <div class="about-secondary__item active js__collapseContainer">
+                                <!-- top -->
+                                <div class="children-top d-3xl-flex items-center justify-between js__collapse border-b-e5 mb-24 pb-24">
+                                    <div class="text d-3xl-flex items-center flex-1 fw-600 text-gray-44">
+                                        <span>Chi tiết </span>
+                                    </div>
+                                    <div class="icon flex-0">
+                                        <div class="icon-minus">
+                                            <img src="./images/svg/minus.svg" alt="">
+                                        </div>
+                                        <div class="icon-plus">
+                                            <img src="./images/svg/plus.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end top -->
+                                
+                                <!-- content -->
+                                <div class="children-content text-gray-44 fs-16 lh-160">
+                                    <ul>
+                                        <li>
+                                            Chào mừng bạn đến với Bắt đầu Quy trình Thiết kế UX: Empathize, Define, Ideate, là khóa học thứ hai trong bảy khóa học trong Chứng chỉ Thiết kế UX của Google. Hành trình hướng tới sự nghiệp của bạn với tư cách là một nhà thiết kế UX vẫn tiếp tục!
+                                        </li>
+                                        <li>
+                                            Trong khóa học này, bạn sẽ hoàn thành các giai đoạn đầu tiên của quy trình thiết kế cho một dự án mà bạn sẽ có thể đưa vào danh mục đầu tư của mình. Trong khóa học trước, bạn đã học về khung tư duy thiết kế (đồng cảm, xác định, ý tưởng, tạo mẫu và thử nghiệm). Khi bạn tiến bộ qua khóa học này, bạn có thể nghĩ về khung tư duy thiết kế như một hệ thống từng bước có cấu trúc để học quy trình thiết kế.
+                                        </li>
+                                        <li>
+                                            Trong khóa học này, bạn sẽ học cách đồng cảm với người dùng và hiểu những điểm khó khăn của họ, xác định nhu cầu của người dùng bằng cách sử dụng các câu lệnh vấn đề và đưa ra rất nhiều ý tưởng để giải quyết các vấn đề của người dùng đó. Bạn sẽ hoàn thành các hoạt động thực hành tập trung vào việc thiết kế một ứng dụng di động, phù hợp với các nhiệm vụ thực tế mà các nhà thiết kế UX hoàn thành tại chỗ trong các giai đoạn này của quá trình thiết kế.
+                                        </li>
+                                        <li>
+                                            Nội dung và dự án trong mỗi khóa học của chương trình chứng chỉ này được xây dựng dựa trên thông tin được thực hành trong các khóa học trước đó. Để thành công trong khóa học này, bạn nên hoàn thành khóa học trước của chương trình chứng chỉ, nếu bạn chưa làm như vậy.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end item -->
+                            
+                           
+                        </div>
+                        <!-- end list -->
+
+                        <!-- share -->
+                        <div class="detail-author-source d-3xl-flex  items-center justify-between mt-20 py-10 border-t-e5">
+                            <!-- social -->
+                            <ul class="social-detail d-3xl-flex items-center">
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/fb-gray.svg" loading="lazy" alt="" width="" height="">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/tiktok-gray.svg" loading="lazy" alt="" width="" height="">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/ytb-gray.svg" loading="lazy" alt="" width="" height="">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/twitter-gray.svg" loading="lazy" alt="" width="" height="">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/instagram-gray.svg" loading="lazy" alt="" width="" height="">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/zalo-gray.svg" loading="lazy" alt="" width="" height="">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/email-gray-2.svg" loading="lazy" alt="" width="" height="">
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <!-- end social -->
+
+                        </div>
+                        <!-- end share -->
+
+                        <!-- btn -->
+                        <div class="course-01-primary__btn mt-24">
+                            <a href="#" class="section-quinary__link btn-blue py-12 px-16 d-3xl-flex items-center gap-20">
+                                <span class="text-white-85 fs-16 flex-1">Đã hoàn thành</span>
+                                <img src="./images/svg/arrow-next-w-2.svg" alt="" class="flex-0 icon-20">
+                            </a>
+                        </div>
+                        <!-- end btn -->
+                    </div>
+                    <!-- end right -->
+                </div>
+            </section>
+            <!-- end course-01 secondary -->
+
+
+
+            <!-- senary -->
+            <section class="section-senary relative z-20 over-hidden w-wrapper bg-black-191">
+                <div class="section-senary__container w-1140 py-60 py-sm-40">
+                    <!-- top -->
+                    <div class="section-senary__top d-3xl-flex">
+                        <!-- left -->
+                        <div class="left flex-1 py-40 pl-40 pr-20">
+                            <!-- heading -->
+                            <h2 class="heading-primary fs-40 fw-500 text-white">Giới thiệu <br> EduChat</h2>
+                            <!-- end heading -->
+
+                            <!-- content -->
+                            <div class="content d-3xl-flex d-sm-block items-center mt-24 justify-between fs-14 text-white-85 lh-160 fw-300 gap-20">
+                                <div class="flex-1">
+                                    <p>Edu Chat là một hệ thống đào tạo trực tuyến, cổng kết nối Chuyên gia với Học viên</p>
+                                    <p class="mt-24">
+                                        Sứ mệnh của Unica là chia sẻ kiến thức thực tiễn tới 10 triệu người dân Việt Nam
+                                    </p>
+                                </div>
+                                <div class="flex-1">
+                                    <p>Giờ đây học viên có thể học trực tuyến các bài học của hệ thống Unica mà không cần tới máy tính, vì chỉ với một chiếc smartphone học viên vẫn có thể học được các khoá học một cách thuận tiện nhất với mọi chức năng tương tự trên web.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- content -->
+                        </div>
+                        <!-- end left -->
+                        <!-- right -->
+                        <div class="right flex-0 w-40 relative over-hidden">
+                            <div class="section-senary__bg">
+                                <img src="./images/person_2.png" alt="">
+                            </div>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                    <!-- end top -->
+
+                    <!-- btn -->
+                    <div class="section-senary__btn mt-24 d-3xl-flex items-center flex-end">
+                        <a href="#" class="section-quinary__link btn-blue py-12 px-16 d-3xl-flex items-center gap-20">
+                            <span class="text-white-85 fs-16 flex-1">Xem chi tiết</span>
+                            <img src="./images/svg/arrow-next-w-2.svg" alt="" class="flex-0 icon-20">
+                        </a>
+                    </div>
+                    <!-- end btn -->
+                </div>
+            </section>
+            <!-- end senary -->
+           
+            <!-- septernary -->
+            <section class="section-septernary relative z-20 over-hidden w-wrapper bg-gray-e8">
+                <div class="section-septernary__container w-1140 py-60 py-sm-40 d-3xl-flex d-md-block items-center">
+                   <!-- left -->
+                   <div class="section-septernary__left flex-1 pr-40">
+                        <h2 class="heading-primary fs-40 fw-500">Liên hệ</h2>
+                        <div class="txt mt-40">
+                            <h3 class="title fs-17 fw-500">CÔNG TY CỔ PHẦN GIA ĐÌNH MỚI</h3>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Giấy phép thiết lập MXH số …/GP-BTTTT, do Bộ Thông tin và Truyền thông cấp ngày….</p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Chịu trách nhiệm: <strong>Nguyễn Quyết</strong> </p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Hotline:</p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Địa chỉ:</p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Văn phòng làm việc:</p>
+                            <p class="text-1 mt-16 fs-15 text-gray-44 lh-160">Email: educhat.vn@gmail.com</p>
+                        </div>
+                   </div>
+                   <!-- end left -->
+                   <!-- right -->
+                   <div class="section-septernary__right flex-0 mt-md-40">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1120315029334!2d105.78825837584134!3d21.02820288779654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4ee3d2b0f7%3A0x5ae05f0cc5533cd8!2zQ8O0bmcgdmnDqm4gQ-G6p3UgR2nhuqV5!5e0!3m2!1svi!2s!4v1744265206620!5m2!1svi!2s" width="730" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   </div>
+                   <!-- end right -->
+                </div>
+            </section>
+            <!-- end quinary -->
+
+        </main>
+        <!-- end main -->
+        <!-- footer -->
+        <footer id="footer" class="footer z-20 relative bg-white w-wrapper">
+            <!-- container -->
+            <div class="footer-container w-1140 d-3xl-flex d-md-block items-center justify-between gap-20 py-24">
+                <!-- left -->
+                <div class="footer-left d-3xl-flex d-sm-block items-center">
+                    <!-- logo -->
+                    <div class="footer-logo mr-30">
+                        <a href="#">
+                            <img src="./images/svg/logo_3.svg" alt="">
+                        </a>
+                    </div>
+                    <!-- end logo -->
+                    <p class="text-gray-44 fs-15 mt-sm-20">® EduCHAT giữ bản quyền nội dung trên website này</p>
+                </div>
+                <!-- end left -->
+                <!-- right -->
+                <div class="footer-right mt-md-40">
+                    <!-- social -->
+                    <ul class="social d-3xl-flex items-center justify-center">
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/fb-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/tiktok-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/ytb-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/Twitter-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <img src="./images/svg/instagram-gray.svg" loading="lazy" alt="" width="" height="">
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- end social -->
+                </div>
+                <!-- end right -->
+            </div>
+            <!-- end container -->
+            <!-- back top -->
+            <div id="back-top">
+                <img src="./images/svg/arrow-top-w.svg" alt="">
+            </div>
+            <!-- end back top -->
+        </footer>
+        <!-- end footer -->
+        <script src="./lib/swiper/swiper-bundle.min.js"></script>
+        <script src="./js/ResizeSensor.js"></script>
+        <script src="./js/theia-sticky-sidebar.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
